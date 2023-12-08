@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             listTime = new ListView();
             columnTimezone = new ColumnHeader();
             columnDateTime = new ColumnHeader();
@@ -64,7 +65,7 @@
             // listTime
             // 
             listTime.Columns.AddRange(new ColumnHeader[] { columnTimezone, columnDateTime });
-            listTime.Font = new Font("Microsoft YaHei UI", 9F);
+            listTime.Font = new Font("Microsoft YaHei UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             listTime.FullRowSelect = true;
             listTime.GridLines = true;
             listTime.Location = new Point(8, 73);
@@ -385,6 +386,7 @@
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
             DoubleBuffered = true;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(2);
             Name = "MainForm";
             Text = "各时区时间戳转换器";
